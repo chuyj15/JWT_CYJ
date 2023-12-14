@@ -79,7 +79,6 @@ public class LoginController {
         log.info("roles : "+roles);
         return new ResponseEntity<String>(parsedToken.toString(), HttpStatus.OK);
     }
-
     //토큰 해석 ---필터에서 해줘야 한다. 
     //클라이언트에선 암호화된 jwt만 알아도 된다. 
 
