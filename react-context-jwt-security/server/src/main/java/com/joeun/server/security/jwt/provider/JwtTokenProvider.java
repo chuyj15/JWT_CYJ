@@ -159,7 +159,7 @@ public class JwtTokenProvider {
             // OK
             // new UsernamePasswordAuthenticationToken( 사용자정보객체, 비밀번호, 사용자의 권한(목록) );
             return new UsernamePasswordAuthenticationToken(userDetails, null, authorities);
-
+            //UsernamePasswordAuthenticationToken은 Spring Security의 Authentication 인터페이스를 구현하고 있습니다. 
         } catch (ExpiredJwtException exception) {
             log.warn("Request to parse expired JWT : {} failed : {}", authHeader, exception.getMessage());
         } catch (UnsupportedJwtException exception) {
